@@ -16,7 +16,6 @@ object Global extends WithFilters(NoCacheFilter) with GlobalSettings {
 
   override def onStart(app: Application): Unit = {
     val renderer = ConfigRenderOptions.defaults().setComments(false).setOriginComments(false)
-    /*
     println( s"""
         |
         |
@@ -26,8 +25,7 @@ object Global extends WithFilters(NoCacheFilter) with GlobalSettings {
         |
         |
         |""".stripMargin)
-  */
-    //ProductDataLoader.loadData()
+    ProductDataLoader.loadData()
   }
 
 }
