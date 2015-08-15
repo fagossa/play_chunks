@@ -67,7 +67,7 @@ trait DefaultProductController {
       }.mkString(separator)
     }
     if (transactions.nonEmpty)
-      transactions.map(toLine).mkString("\n")
+      transactions.map(toLine).mkString("\n").concat("\n")
     else
       "No products found"
   }
